@@ -9,4 +9,11 @@ public class HelloServiceImpl implements HelloService {
     public String hello(String name) {
         return "hello" + name;
     }
+
+    @Override
+    public void print(String a) {
+        System.out.println("print something"+a);
+
+    }
+
 }

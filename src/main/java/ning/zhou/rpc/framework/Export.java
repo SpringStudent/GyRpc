@@ -48,6 +48,9 @@ public class Export {
                                     String methodName = invoker.getMethodName();
                                     Method method = obj.getClass().getMethod(methodName, parameterTypes);
                                     Object result = method.invoke(obj, arguments);
+                                    if(result==null){
+                                        result = ResultRefer.getNoResult();
+                                    }
                                     channelHandlerContext.writeAndFlush(result);
                                 }
                             });

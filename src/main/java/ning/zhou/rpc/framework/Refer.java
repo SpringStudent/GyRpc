@@ -49,7 +49,9 @@ public class Refer {
 
                                     @Override
                                     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-                                        resultRefer.setResult(msg);
+                                        if(msg!=ResultRefer.getNoResult()){
+                                            resultRefer.setResult(msg);
+                                        }
                                         countDownLatch.countDown();
                                     }
                                 });

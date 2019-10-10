@@ -7,4 +7,6 @@ package ning.zhou.rpc.framework;
 public interface HelloService {
 
     String hello(String name);
+
+    void print(String a);
 }
