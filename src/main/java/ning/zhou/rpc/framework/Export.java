@@ -23,8 +23,8 @@ public class Export {
      */
     private Map<Class, Object> registried = new HashMap<>();
 
-    public void setRegistried(Map<Class, Object> registried) {
-        this.registried = registried;
+    public void regist(Class clss,Object obj){
+        registried.put(clss,obj);
     }
 
     public void export(int port) {

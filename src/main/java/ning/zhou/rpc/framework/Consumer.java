@@ -12,7 +12,7 @@ public class Consumer {
         for(int i = 0;i<Integer.MAX_VALUE;i++){
             System.out.println(helloService.hello("World" + i));
             helloService.print(i+"");
-            Thread.sleep(6000);
+            Thread.sleep(1000);
         }
 
     }
